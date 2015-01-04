@@ -7,7 +7,7 @@ and open the template in the editor.
 
 
 <html>
-    <head>
+        <head>
         <title>Prof-Hub</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +15,16 @@ and open the template in the editor.
     </head>
     <body >
         <h1  id="heading">Prof-Hub</h1>
-        
- 
+        <form action="logout.php">
+        <input class="btn btn-danger" type="submit" id="signOut" value="Sign Out" />
+        </form>
         
         
  <div id='container'>  
      <p id="pname"><?php echo $_GET['name'];  ?></p>
      <h2 id="heading"><img src="x.jpeg" alt="browser out of date" width="100" height="100"/> CanXelled</h2>
      
-<form name="theform"  method="post" onsubmit="return validateForm()">
+<form  method="post" action="Send.php">
             
     <table id="table-back_Main">
         <tr><td class="lead">Select College</td>
@@ -49,7 +50,7 @@ and open the template in the editor.
           </tr>    
                 
           <tr><td class="lead">Message </td>
-            <td> <textarea rows="5" class="form-control" id="text1" placeholder="Type your message..."></textarea></td>
+            <td> <textarea rows="5" class="form-control" id="text1" name="message" placeholder="Type your message..."></textarea></td>
             
         </tr>     
             
@@ -67,6 +68,7 @@ and open the template in the editor.
 
 </div>
 
- <?php exit();?>      
+ <?php
+  exit();?>      
     </body>
 </html>

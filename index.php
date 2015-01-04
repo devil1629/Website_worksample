@@ -40,7 +40,13 @@ and open the template in the editor.
 
 
         <h1  id="heading">Prof-Hub</h1>
-        
+
+
+        <form action="create.php">
+        <input class="btn btn-danger" type="submit" id="signOut" value="Sign Up" />
+        </form>
+
+
         <div id="login">
             <form method="post" action="index.php">
             <table id="table-back">
